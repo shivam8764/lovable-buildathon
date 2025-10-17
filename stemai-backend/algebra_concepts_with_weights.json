@@ -1,0 +1,233 @@
+{
+  "Whole Numbers": {
+    "domain": "Mathematics",
+    "depends_on": [],
+    "leads_to": [
+      {
+        "topic": "Integers",
+        "weight": 0.8
+      },
+      {
+        "topic": "Factors and Multiples",
+        "weight": 0.8
+      }
+    ]
+  },
+  "Integers": {
+    "domain": "Mathematics",
+    "depends_on": [
+      {
+        "topic": "Whole Numbers",
+        "weight": 0.8
+      }
+    ],
+    "leads_to": [
+      {
+        "topic": "Expressions",
+        "weight": 0.8
+      },
+      {
+        "topic": "Rational Numbers",
+        "weight": 0.8
+      }
+    ]
+  },
+  "Fractions": {
+    "domain": "Mathematics",
+    "depends_on": [
+      {
+        "topic": "Division",
+        "weight": 0.9
+      },
+      {
+        "topic": "Multiplication",
+        "weight": 0.9
+      }
+    ],
+    "leads_to": [
+      {
+        "topic": "Ratios",
+        "weight": 0.9
+      },
+      {
+        "topic": "Decimals",
+        "weight": 0.8
+      },
+      {
+        "topic": "Percentages",
+        "weight": 0.8
+      }
+    ]
+  },
+  "Ratios": {
+    "domain": "Mathematics",
+    "depends_on": [
+      {
+        "topic": "Fractions",
+        "weight": 0.9
+      }
+    ],
+    "leads_to": [
+      {
+        "topic": "Proportions",
+        "weight": 0.8
+      },
+      {
+        "topic": "Linear Relationships",
+        "weight": 0.7
+      }
+    ]
+  },
+  "Proportions": {
+    "domain": "Mathematics",
+    "depends_on": [
+      {
+        "topic": "Ratios",
+        "weight": 0.8
+      }
+    ],
+    "leads_to": [
+      {
+        "topic": "Linear Equations",
+        "weight": 0.6
+      },
+      {
+        "topic": "Percentages",
+        "weight": 0.7
+      }
+    ]
+  },
+  "Linear Equations": {
+    "domain": "Mathematics",
+    "depends_on": [
+      {
+        "topic": "Expressions",
+        "weight": 0.8
+      },
+      {
+        "topic": "Proportions",
+        "weight": 0.6
+      }
+    ],
+    "leads_to": [
+      {
+        "topic": "Slope and Intercept",
+        "weight": 0.9
+      },
+      {
+        "topic": "Linear Functions",
+        "weight": 0.8
+      },
+      {
+        "topic": "Systems of Equations",
+        "weight": 0.8
+      }
+    ]
+  },
+  "Slope and Intercept": {
+    "domain": "Mathematics",
+    "depends_on": [
+      {
+        "topic": "Linear Equations",
+        "weight": 0.9
+      }
+    ],
+    "leads_to": [
+      {
+        "topic": "Linear Functions",
+        "weight": 0.8
+      }
+    ]
+  },
+  "Linear Functions": {
+    "domain": "Mathematics",
+    "depends_on": [
+      {
+        "topic": "Slope and Intercept",
+        "weight": 0.8
+      }
+    ],
+    "leads_to": [
+      {
+        "topic": "Systems of Equations",
+        "weight": 0.8
+      },
+      {
+        "topic": "Piecewise Functions",
+        "weight": 0.7
+      }
+    ]
+  },
+  "Systems of Equations": {
+    "domain": "Mathematics",
+    "depends_on": [
+      {
+        "topic": "Linear Functions",
+        "weight": 0.8
+      }
+    ],
+    "leads_to": [
+      {
+        "topic": "Quadratic Systems",
+        "weight": 0.6
+      }
+    ]
+  },
+  "Polynomials": {
+    "domain": "Mathematics",
+    "depends_on": [
+      {
+        "topic": "Expressions",
+        "weight": 0.8
+      },
+      {
+        "topic": "Exponents",
+        "weight": 0.8
+      }
+    ],
+    "leads_to": [
+      {
+        "topic": "Factoring",
+        "weight": 0.8
+      },
+      {
+        "topic": "Rational Expressions",
+        "weight": 0.7
+      }
+    ]
+  },
+  "Factoring": {
+    "domain": "Mathematics",
+    "depends_on": [
+      {
+        "topic": "Polynomials",
+        "weight": 0.8
+      }
+    ],
+    "leads_to": [
+      {
+        "topic": "Quadratic Equations",
+        "weight": 0.9
+      }
+    ]
+  },
+  "Quadratic Equations": {
+    "domain": "Mathematics",
+    "depends_on": [
+      {
+        "topic": "Factoring",
+        "weight": 0.9
+      }
+    ],
+    "leads_to": [
+      {
+        "topic": "Quadratic Functions",
+        "weight": 0.9
+      },
+      {
+        "topic": "Complex Numbers",
+        "weight": 0.7
+      }
+    ]
+  }
+}

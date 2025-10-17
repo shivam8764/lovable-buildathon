@@ -1,0 +1,169 @@
+{
+  "info": {
+    "name": "STEMAI Backend API",
+    "_postman_id": "fa8f534e-5a6e-4baf-8a9e-00bcae23a5cc",
+    "description": "Postman collection to test the STEMAI FastAPI + MongoDB backend.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Health Check",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/health",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["health"]
+        }
+      }
+    },
+    {
+      "name": "Upsert Concept",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Fractions\",\n  \"domain\": \"Mathematics\",\n  \"grade_level\": 6,\n  \"description\": \"Understanding parts of a whole using division.\",\n  \"depends_on\": [\n    {\"topic\": \"Division\", \"weight\": 0.9},\n    {\"topic\": \"Multiplication\", \"weight\": 0.8}\n  ],\n  \"leads_to\": [\n    {\"topic\": \"Ratios\", \"weight\": 0.9},\n    {\"topic\": \"Decimals\", \"weight\": 0.8}\n  ]\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8000/concepts",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["concepts"]
+        }
+      }
+    },
+    {
+      "name": "Get All Concepts",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/concepts?limit=20",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["concepts"],
+          "query": [{ "key": "limit", "value": "20" }]
+        }
+      }
+    },
+    {
+      "name": "Search Concept",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/concepts/search?q=fractions",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["concepts", "search"],
+          "query": [{ "key": "q", "value": "fractions" }]
+        }
+      }
+    },
+    {
+      "name": "Get Concept by Name",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/concepts/Fractions",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["concepts", "Fractions"]
+        }
+      }
+    },
+    {
+      "name": "Get Subgraph",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/concepts/subgraph?topic=Fractions&depth=2",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["concepts", "subgraph"],
+          "query": [
+            { "key": "topic", "value": "Fractions" },
+            { "key": "depth", "value": "2" }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Get User Progress",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/users/u123/progress",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["users", "u123", "progress"]
+        }
+      }
+    },
+    {
+      "name": "Update User Progress",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"concept_name\": \"Fractions\",\n  \"mastery_score\": 0.75,\n  \"time_spent\": 120,\n  \"attempts\": 3,\n  \"correct\": 2,\n  \"status\": \"learning\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8000/users/u123/progress",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["users", "u123", "progress"]
+        }
+      }
+    },
+    {
+      "name": "Analyze Pace",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/users/u123/pace",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["users", "u123", "pace"]
+        }
+      }
+    },
+    {
+      "name": "Get Adaptive Map",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/adaptive/map?user_id=u123&topic=Fractions&depth=2",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["adaptive", "map"],
+          "query": [
+            { "key": "user_id", "value": "u123" },
+            { "key": "topic", "value": "Fractions" },
+            { "key": "depth", "value": "2" }
+          ]
+        }
+      }
+    }
+  ]
+}
